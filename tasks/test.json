@@ -1,0 +1,12 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "A test task",
+  "input_method": "stdin",
+  "parameters": {
+    "foo": {
+      "description": "A test parameter",
+      "type": "String"
+    }
+  }
+}
