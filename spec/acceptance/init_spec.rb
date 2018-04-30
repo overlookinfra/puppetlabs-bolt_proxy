@@ -11,7 +11,7 @@ end
 describe 'bolt_proxy task' do
   let(:agent) { hosts_as('agent').first }
   let(:task_result) do
-    on(agent, 'bolt task run --modulepath=/etc/puppetlabs/code/modules bolt_proxy ' \
+    on(agent, '/opt/puppetlabs/puppet/bin/bolt task run --modulepath=/etc/puppetlabs/code/modules bolt_proxy ' \
     '--params=\'{"task":"bolt_proxy::test", "node":"localhost", "params":{"foo":"bar"}}\' --nodes ' + agent.hostname + ' --no-host-key-check')
   end
 

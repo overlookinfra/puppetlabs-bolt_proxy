@@ -1,9 +1,14 @@
-# A description of what this class does
+# Install bolt into the puppet agent. Since this module is primarily useful in PE
+# this class can't use the FOSS bolt packages from the puppet5 repos. Instead it
+# installs the gem into the puppet-agent's ruby.
 #
-# @summary A short summary of the purpose of this class
+# @summary Install bolt into the puppet agent
 #
 # @example
 #   include bolt_proxy
 class bolt_proxy {
-  package { 'bolt': ensure => installed }
+  package { 'bolt':
+    ensure   => installed,
+    provider => puppet_gem,
+  }
 }
