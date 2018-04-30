@@ -1,5 +1,5 @@
 
-# bolt_proxy
+# bolt_proxy [![Build Status](https://travis-ci.org/puppetlabs/puppetlabs-bolt_proxy.svg?branch=master)](https://travis-ci.org/puppetlabs/puppetlabs-bolt_proxy)
 
 Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules.html .
 
