@@ -5,6 +5,7 @@
     - set: docker/ubuntu-14.04
   docker_defaults:
     bundler_args: ""
+    env: BEAKER_PUPPET_COLLECTION=puppet5 BEAKER_debug=true BEAKER_set=@@SET@@
   secure: ""
   branches:
     - release
