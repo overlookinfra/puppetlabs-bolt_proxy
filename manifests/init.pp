@@ -7,8 +7,26 @@
 # @example
 #   include bolt_proxy
 class bolt_proxy {
+  case $facts['os']['family'] {
+    'debian': {
+      $dev_packages = [ 'make', 'gcc', 'ruby-dev']
+    }
+    'redhat': {
+      $dev_packages = [ 'make', 'gcc', 'ruby-devel']
+    }
+    default: { }
+  }
+
+  if $dev_packages {
+    package {
+      $dev_packages:
+        ensure => installed,
+    }
+  }
+
   package { 'bolt':
     ensure   => installed,
     provider => puppet_gem,
+    require  => Package[$dev_packages]
   }
 }
