@@ -16,6 +16,7 @@ describe 'bolt_proxy task' do
   end
 
   it 'executes successfully' do
-    expect_multiple_regexes(result: task_result.stdout, regexes: [%r{status.*(success)}, %r{#{task_summary_line}}])
+    expect(task_result.stdout).to match(%r{foo.*(bar)})
+    expect(task_result.stdout).to match(%r{Ran on 1 node})
   end
 end
