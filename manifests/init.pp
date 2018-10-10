@@ -25,7 +25,7 @@ class bolt_proxy {
   }
 
   package { 'bolt':
-    ensure   => installed,
+    ensure   => '0.24.0',
     provider => puppet_gem,
     require  => Package[$dev_packages]
   }
