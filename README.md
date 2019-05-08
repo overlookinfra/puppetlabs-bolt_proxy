@@ -68,6 +68,8 @@ Users need a complete list of your module's classes, types, defined types provid
   * Valid values, if the data type doesn't make it obvious.
   * Default value, if any.
 
+Example of generated reference file using Puppet Strings: [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-bolt_proxy/blob/master/REFERENCE.md)
+
 ## Limitations
 
 This is where you list OS compatibility, version compatibility, etc. If there are Known Issues, you might want to include them under their own heading here.
