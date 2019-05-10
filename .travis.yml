@@ -7,6 +7,7 @@ before_install:
   - bundle -v
   - rm -f Gemfile.lock
   - gem update --system
+  - gem i rubygems-update -v '<3' && update_rubygems
   - gem update bundler
   - gem --version
   - bundle -v
@@ -48,7 +49,7 @@ matrix:
       env: CHECK=spec
     -
       env: PUPPET_GEM_VERSION="~> 4.0" CHECK=spec
-      rvm: 2.1.9
+      rvm: 2.4.1
 branches:
   only:
     - master
